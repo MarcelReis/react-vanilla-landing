@@ -26,7 +26,7 @@ backButton.addEventListener("click", () => {
   updateImage(activeImageIndex);
 });
 
-const gridGap = 15;
+const gridGap = 20;
 function updateImage(index) {
   if (isMobile) {
     container.style.transform = `translateX(-${index * 100}%)`;
