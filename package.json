@@ -12,6 +12,7 @@
     "build:vanilla": "webpack --env app=vanilla"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "sass": "^1.30.0",

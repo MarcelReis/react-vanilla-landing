@@ -19,7 +19,7 @@ const config: (env: { app: "react" | "vanilla" }) => webpack.Configuration = (
         loader: "html-loader",
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(sc|sa|c)ss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
