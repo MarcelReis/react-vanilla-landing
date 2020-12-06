@@ -1,0 +1,30 @@
+.slider {
+  overflow: hidden;
+  margin: auto;
+  max-width: 600px;
+}
+
+.slider__container {
+  display: grid;
+  grid-template-columns: repeat(9, 100vw);
+}
+
+.slider__figure {
+  margin: 0;
+  width: 100%;
+}
+
+@media (max-width: 599px) {
+  .slider__container {
+    grid-template-columns: repeat(9, 100%);
+    transition: 200ms transform ease;
+  }
+}
+
+@media (min-width: 600px) {
+  .slider__container {
+    grid-template-columns: repeat(9, calc(33.3333% - 10px));
+    gap: 15px;
+    transition: 400ms transform ease;
+  }
+}

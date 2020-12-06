@@ -28,6 +28,10 @@
   height: 24px;
   width: 24px;
 
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
   &::after {
     display: block;
     content: "";
