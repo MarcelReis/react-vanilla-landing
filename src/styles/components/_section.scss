@@ -1,8 +1,11 @@
 .section {
   width: 100%;
-  position: relative;
 }
 
 .section--gray-2 {
   background-color: var(--c-gray-2);
+}
+
+.section--gray-1 {
+  background-color: var(--c-gray-1);
 }
