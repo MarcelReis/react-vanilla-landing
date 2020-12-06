@@ -1,5 +1,6 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@import "./abstracts/variables";
+
+@import "./base/reset";
+
+@import "./components/header";
+@import "./components/carousel";

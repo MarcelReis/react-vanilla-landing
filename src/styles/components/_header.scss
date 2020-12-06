@@ -1,0 +1,39 @@
+.header {
+  text-align: center;
+  width: 100%;
+}
+
+.header__title {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.header__subtitle {
+  margin: 0;
+}
+
+.header__arrowDown {
+  position: absolute;
+  font-size: 0;
+}
+
+@media (max-width: 599px) {
+  .header {
+    color: var(--c-white);
+    background-color: var(--c-gray-2);
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    position: absolute;
+  }
+
+  .header__title {
+    color: var(--c-green-0);
+  }
+
+  .header__subtitle {
+    color: var(--c-green-1);
+  }
+}
