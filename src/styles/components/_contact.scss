@@ -1,0 +1,87 @@
+.contact {
+  display: grid;
+  grid-template-rows: repeat(3, 60px) auto 70px;
+  padding: 15px 10px;
+  gap: 10px;
+}
+
+.contact__textField {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 18px;
+}
+.contact__textField--name,
+.contact__textField--email {
+  .contact__textInput {
+    text-indent: 80px;
+  }
+}
+.contact__textField--phone {
+  .contact__textInput {
+    text-indent: 115px;
+  }
+}
+.contact__textField--message {
+  .contact__textInput {
+    padding: 20px 10px;
+    text-indent: 120px;
+  }
+}
+
+.contact__textInput {
+  background-color: var(--c-gray-0);
+  border: 0;
+  padding: 0 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.contact__textLabel {
+  position: absolute;
+  top: 20.5px;
+  left: 20px;
+  color: var(--c-gray-3);
+  font-weight: 500;
+}
+
+.contact__submit {
+  background-color: var(--c-white);
+  border: none;
+  border-radius: 12px;
+  color: var(--c-gray-3);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 160px;
+  margin-top: 10px;
+}
+
+@media (max-width: 599px) {
+  .contact {
+    display: grid;
+    grid-template-rows: repeat(3, 60px) auto 70px;
+    padding: 15px 10px;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 600px) {
+  .contact {
+    display: grid;
+    grid-template-rows: repeat(2, 60px) auto 70px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: auto;
+    max-width: 1200px;
+  }
+
+  .contact__textField--message,
+  .contact__textField--name,
+  .contact__submit {
+    grid-column: span 2;
+  }
+}

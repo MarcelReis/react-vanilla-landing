@@ -14,3 +14,11 @@
 .section--gray-2 {
   background-color: var(--c-gray-2);
 }
+
+.section--divided {
+  background: linear-gradient(
+    to bottom right,
+    var(--c-gray-1) 50%,
+    var(--c-gray-2) 50%
+  );
+}

@@ -341,46 +341,55 @@
       </div>
     </section>
 
-    <form action="contact">
-      <div class="contact__name">
-        <label class="contact__nameLabel" for="name">*Nome</label>
-        <input
-          class="contact__nameInput"
-          id="name"
-          type="text"
-          placeholder="Informe seu nome"
-        />
-      </div>
+    <section class="section section--divided">
+      <form class="contact">
+        <div class="contact__textField contact__textField--name">
+          <label class="contact__textLabel" for="name">*Nome:</label>
+          <input
+            class="contact__textInput"
+            id="name"
+            type="text"
+            placeholder="Informe seu nome"
+          />
+        </div>
 
-      <div class="contact__email">
-        <label class="contact__emailLabel" for="email">*E-mail</label>
-        <input
-          class="contact__emailInput"
-          id="email"
-          type="text"
-          placeholder="Informe seu e-mail"
-        />
-      </div>
+        <div class="contact__textField contact__textField--email">
+          <label class="contact__textLabel" for="email">*E-mail:</label>
+          <input
+            class="contact__textInput"
+            id="email"
+            type="text"
+            placeholder="Informe seu e-mail"
+          />
+        </div>
 
-      <div class="contact__phone">
-        <label for="phone">*Telephone</label>
-        <input id="phone" type="text" placeholder="(__) _____-____" />
-      </div>
+        <div class="contact__textField contact__textField--phone">
+          <label class="contact__textLabel" for="phone">*Telephone:</label>
+          <input
+            class="contact__textInput"
+            id="phone"
+            type="text"
+            placeholder="(__) _____-____"
+          />
+        </div>
 
-      <div class="contact__message">
-        <label class="contact__messageLabel" for="message">*Mensagem</label>
-        <textarea
-          class="contact__messageTextare"
-          id="message"
-          cols="30"
-          rows="10"
-          placeholder="Escreva aqui"
-        ></textarea>
-      </div>
-    </form>
+        <div class="contact__textField contact__textField--message">
+          <label class="contact__textLabel" for="message">*Mensagem:</label>
+          <textarea
+            class="contact__textInput"
+            id="message"
+            cols="30"
+            rows="7"
+            placeholder="Escreva aqui"
+          ></textarea>
+        </div>
+
+        <button class="contact__submit" type="submit">Enviar</button>
+      </form>
+    </section>
 
     <footer class="footer">
-      <p class="footer__text">Lorem</p>
+      <p class="footer__text">Lorem Ipsum</p>
     </footer>
   </body>
 </html>
