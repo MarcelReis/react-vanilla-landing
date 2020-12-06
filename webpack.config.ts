@@ -24,7 +24,7 @@ const config: (env: { app: "react" | "vanilla" }) => webpack.Configuration = (
       },
       {
         test: /\.[tj]sx?$/,
-        use: "ts-loader",
+        use: "babel-loader",
         exclude: /node_modules/,
       },
     ],
@@ -38,7 +38,6 @@ const config: (env: { app: "react" | "vanilla" }) => webpack.Configuration = (
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist", env.app),
-    compress: true,
     port: env.app === "react" ? 9000 : 9001,
   },
 });
