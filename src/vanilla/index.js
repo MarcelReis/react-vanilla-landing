@@ -1,6 +1,7 @@
 import "normalize.css";
 import "../styles/index.scss";
 
-import "./accordion";
-import "./carousel";
-import "./slider";
+import "./js/accordion";
+import "./js/carousel";
+import "./js/contact";
+import "./js/slider";
