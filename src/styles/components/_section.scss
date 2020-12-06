@@ -1,11 +1,16 @@
 .section {
   width: 100%;
+  overflow: hidden;
 }
 
-.section--gray-2 {
-  background-color: var(--c-gray-2);
+.section--gray-0 {
+  background-color: var(--c-gray-0);
 }
 
 .section--gray-1 {
   background-color: var(--c-gray-1);
+}
+
+.section--gray-2 {
+  background-color: var(--c-gray-2);
 }
