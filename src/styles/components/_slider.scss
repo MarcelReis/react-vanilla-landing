@@ -19,6 +19,11 @@
     grid-template-columns: repeat(9, 100%);
     transition: 200ms transform ease;
   }
+
+  .header__title,
+  .header__subtitle {
+    padding-top: 8px;
+  }
 }
 
 @media (min-width: 600px) {

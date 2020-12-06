@@ -5,38 +5,47 @@
 }
 
 .carousel__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
   transition: transform 200ms ease;
 }
 
-.carousel__image {
+.carousel__imageContainer {
+  position: relative;
+  overflow: hidden;
   width: 100%;
+  padding-top: 65.625%;
+}
+
+.carousel__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
 }
 
 .carousel__slider {
-  background-color: rgba(#000, 0.5);
+  background-color: rgba(#313131, 0.5);
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 48px;
   display: flex;
   justify-content: center;
 }
 
 .carousel__radio {
   position: relative;
-  height: 24px;
-  width: 24px;
 
   &:not(:last-child) {
-    margin-right: 8px;
+    margin-right: 16px;
   }
 
   &::after {
     display: block;
     content: "";
-    width: 24px;
-    height: 24px;
+
     position: absolute;
     border: 4px solid var(--c-gray-3);
     background-color: var(--c-white);
@@ -48,5 +57,49 @@
   &:checked::after {
     background-color: var(--c-green-0);
     border-color: var(--c-white);
+  }
+}
+
+@media (max-width: 599px) {
+  .carousel__imageContainer {
+    padding-top: 65.625%;
+  }
+
+  .carousel__slider {
+    height: 40px;
+    padding: 5px;
+  }
+
+  .carousel__radio {
+    height: 30px;
+    width: 30px;
+
+    &::after {
+      border-width: 4px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .carousel__imageContainer {
+    padding-top: 50%;
+  }
+
+  .carousel__slider {
+    height: 80px;
+    padding: 15px;
+  }
+
+  .carousel__radio {
+    height: 50px;
+    width: 50px;
+
+    &::after {
+      border-width: 8px;
+      width: 50px;
+      height: 50px;
+    }
   }
 }

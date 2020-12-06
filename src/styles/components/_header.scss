@@ -1,6 +1,8 @@
 .header {
+  position: relative;
   text-align: center;
   width: 100%;
+  z-index: 10;
 }
 
 .header__title {
@@ -14,13 +16,24 @@
 
 .header__arrowDown {
   position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translate(-50%, 100%);
   font-size: 0;
+  width: 24px;
+  height: 36px;
+  background-color: #fff;
 }
 
 @media (max-width: 599px) {
   .header {
+    height: 100px;
     color: var(--c-white);
     background-color: var(--c-gray-2);
+  }
+
+  .header__arrowDown {
+    bottom: -5px;
   }
 }
 
@@ -29,11 +42,21 @@
     position: absolute;
   }
 
+  .header__arrowDown {
+    bottom: -15px;
+  }
+
   .header__title {
     color: var(--c-green-0);
+    padding-top: 50px;
+    font-size: 60px;
   }
 
   .header__subtitle {
     color: var(--c-green-1);
+    padding-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    word-wrap: none;
   }
 }
