@@ -31,7 +31,7 @@ const Accordion = () => {
                 <div className="accordion__content">
                   <img
                     className="accordion__image"
-                    src="https://placekitten.com/300/200"
+                    src={`/assets/img/accordion-${index + 1}.jpg`}
                     alt=""
                   />
                   <p className="accordion__text">
