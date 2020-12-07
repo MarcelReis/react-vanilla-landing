@@ -1,5 +1,7 @@
 node_modules/
 
+.netlify/
+
 dist/
 
 yarn-error.log
