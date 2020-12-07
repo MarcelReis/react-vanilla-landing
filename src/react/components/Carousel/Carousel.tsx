@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 const images = [
-  { src: "/assets/img/accordion-1.jpg", alt: "" },
-  { src: "/assets/img/accordion-2.jpg", alt: "" },
-  { src: "/assets/img/accordion-3.jpg", alt: "" },
+  { src: "/assets/img/carousel-1.jpg", alt: "" },
+  { src: "/assets/img/carousel-2.jpg", alt: "" },
+  { src: "/assets/img/carousel-3.jpg", alt: "" },
 ];
 
 const Carousel = () => {
