@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Cleave from "cleave.js/react";
+
 import {
   validateEmail,
   validateMessage,
@@ -73,7 +75,7 @@ const Contact = () => {
           <label className="contact__textLabel" htmlFor="email">
             *E-mail:
           </label>
-          <input
+          <Cleave
             className="contact__textInput"
             id="email"
             type="text"
@@ -81,6 +83,7 @@ const Contact = () => {
             onChange={({ target }) =>
               setState((state) => ({ ...state, email: target.value }))
             }
+            options={{ lowercase: true }}
             value={state.email}
           />
         </div>
@@ -93,15 +96,19 @@ const Contact = () => {
           <label className="contact__textLabel" htmlFor="phone">
             *Telephone:
           </label>
-          <input
-            className="contact__textInput"
+          <Cleave
             id="phone"
+            className="contact__textInput"
             type="text"
+            value={state.phone}
             placeholder="(__) _____-____"
+            options={{
+              blocks: [0, 2, 4, 5],
+              delimiters: ["(", ") ", "-"],
+            }}
             onChange={({ target }) =>
               setState((state) => ({ ...state, phone: target.value }))
             }
-            value={state.phone}
           />
         </div>
 

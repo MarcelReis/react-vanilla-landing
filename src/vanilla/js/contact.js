@@ -1,3 +1,5 @@
+import Cleave from "cleave.js";
+
 import {
   validateEmail,
   validateMessage,
@@ -38,3 +40,12 @@ submitButton.addEventListener("click", (event) => {
 function addInputError(inputElement) {
   inputElement.parentElement.classList.add("contact__textField--error");
 }
+
+new Cleave("#phone", {
+  blocks: [0, 2, 4, 5],
+  delimiters: ["(", ") ", "-"],
+});
+
+new Cleave("#email", {
+  lowercase: true,
+});
