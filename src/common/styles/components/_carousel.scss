@@ -37,6 +37,7 @@
 
 .carousel__radio {
   position: relative;
+  cursor: pointer;
 
   &:not(:last-child) {
     margin-right: 16px;
