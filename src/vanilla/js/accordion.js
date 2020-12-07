@@ -1,5 +1,3 @@
-// @ts-check javascript
-
 const accordion = document.querySelector(".accordion");
 const accodionItems = document.querySelectorAll(".accordion__item");
 
