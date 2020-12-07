@@ -37,6 +37,10 @@ const config: (env: { app: "react" | "vanilla" }) => webpack.Configuration = (
     ],
   },
 
+  resolve: {
+    extensions: [".tsx", ".jsx", ".js", ".ts"],
+  },
+
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
