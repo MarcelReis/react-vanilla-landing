@@ -8,7 +8,7 @@
     "dev:react": "webpack serve --env app=react --env mode=development",
     "dev:vanilla": "webpack serve --env app=vanilla --env mode=development",
     "gulp": "gulp",
-    "build": "run-p build:* & gulp",
+    "build": "run-p build:* && gulp",
     "build:react": "webpack --env app=react --env mode=production",
     "build:vanilla": "webpack --env app=vanilla --env mode=production"
   },
