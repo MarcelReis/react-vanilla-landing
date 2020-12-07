@@ -4,10 +4,12 @@ import * as webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
-const config: (env: { app: "react" | "vanilla" }) => webpack.Configuration = (
-  env
-) => ({
+const config: (env: {
+  app: "react" | "vanilla";
+  mode: "production" | "development";
+}) => webpack.Configuration = (env) => ({
   entry: `./src/${env.app}/${env.app === "react" ? "index.tsx" : "index.js"}`,
+  mode: env.mode,
   output: {
     path: path.resolve(__dirname, "dist", env.app),
     filename: "index.js",
@@ -48,7 +50,11 @@ const config: (env: { app: "react" | "vanilla" }) => webpack.Configuration = (
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, "dist", env.app),
+    contentBase: [
+      path.join(__dirname, "dist", env.app),
+      path.join(__dirname, "src", "common", "assets"),
+    ],
+    contentBasePublicPath: ["/", "/assets"],
     port: env.app === "react" ? 9000 : 9001,
   },
 });
