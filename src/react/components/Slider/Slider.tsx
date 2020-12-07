@@ -46,7 +46,7 @@ const Slider = () => {
             {items.map((_, index) => (
               <figure key={index} className="slider__figure">
                 <img
-                  src="https://placekitten.com/400/300"
+                  src={`/assets/img/slider-${index + 1}.jpg`}
                   alt=""
                   className="slider__image"
                 />

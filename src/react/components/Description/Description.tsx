@@ -7,7 +7,7 @@ const Description = () => {
         <div className="description__imageContainer">
           <img
             className="description__image"
-            src="https://placekitten.com/200/200"
+            src="/assets/img/description-1.jpg"
             alt=""
           />
         </div>
