@@ -20,9 +20,7 @@
   left: 50%;
   transform: translate(-50%, 100%);
   font-size: 0;
-  width: 24px;
-  height: 36px;
-  background-color: #fff;
+  color: var(--c-gray-3);
 }
 
 @media (max-width: 599px) {

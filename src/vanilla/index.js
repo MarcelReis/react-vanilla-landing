@@ -1,5 +1,5 @@
 import "normalize.css";
-import "../styles/index.scss";
+import "../common/styles/index.scss";
 
 import "./js/accordion";
 import "./js/carousel";

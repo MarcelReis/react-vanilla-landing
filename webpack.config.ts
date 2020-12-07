@@ -15,6 +15,13 @@ const config: (env: { app: "react" | "vanilla" }) => webpack.Configuration = (
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        loader: "file-loader",
+        options: {
+          publicPath: "/",
+        },
+      },
+      {
         test: /\.html$/i,
         loader: "html-loader",
       },
@@ -23,7 +30,7 @@ const config: (env: { app: "react" | "vanilla" }) => webpack.Configuration = (
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.[tj]sx?$/,
+        test: /\.[tj]sx?$/i,
         use: "babel-loader",
         exclude: /node_modules/,
       },

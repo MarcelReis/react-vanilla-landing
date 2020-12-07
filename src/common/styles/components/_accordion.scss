@@ -33,6 +33,10 @@
 .accordion__item--active {
   background-color: var(--c-white);
   color: var(--c-gray-1);
+
+  .accordion__arrow {
+    transform: rotate(180deg);
+  }
 }
 
 .accordion__title {
@@ -45,11 +49,7 @@
 }
 .accordion__arrow {
   position: absolute;
-  top: 13px;
-  right: 20px;
-  width: 24px;
-  height: 24px;
-  background-color: var(--c-gray-0);
+  transition: transform 200ms;
 }
 
 .accordion__image {
@@ -73,6 +73,11 @@
     text-align: center;
     padding: 20px;
   }
+
+  .accordion__arrow {
+    top: 10px;
+    right: 20px;
+  }
 }
 
 @media (min-width: 600px) {
@@ -90,5 +95,10 @@
     grid-template-columns: 2fr 5fr;
     gap: 25px;
     place-items: center;
+  }
+
+  .accordion__arrow {
+    top: 13px;
+    right: 10px;
   }
 }

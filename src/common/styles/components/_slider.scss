@@ -33,10 +33,10 @@
 .slider__arrowBack,
 .slider__arrowNext {
   position: absolute;
-  display: block;
-  width: 75px;
-  height: 40px;
-  background-color: var(--c-white);
+  background: none;
+  border: none;
+  height: 50px;
+  color: var(--c-white);
   bottom: 15px;
 }
 
